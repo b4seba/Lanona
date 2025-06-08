@@ -1,0 +1,19 @@
+{
+    "usuarios": {
+        "jefeVentas": {
+            "password": "12345",
+            "role": "jefe",
+            "nombre": "Jefe de Ventas"
+        },
+        "vendedor": {
+            "password": "1234",
+            "role": "vendedor",
+            "nombre": "Vendedor"
+        },
+        "admin": {
+            "password": "admin123",
+            "role": "jefe", 
+            "nombre": "Administrador"
+        }
+    }
+}
