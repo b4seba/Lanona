@@ -1,0 +1,114 @@
+{
+    "usuarios": {
+        "jefeVentas": {
+            "password": "admin123",
+            "tipo": "jefe"
+        },
+        "vendedor": {
+            "password": "vendedor123",
+            "tipo": "vendedor"
+        }
+    },
+    "productos": {
+        "P001": {
+            "nombre": "Cuaderno Pro",
+            "precio": 1500,
+            "sku": "P001"
+        },
+        "P002": {
+            "nombre": "Lápiz Grafito HB",
+            "precio": 300,
+            "sku": "P002"
+        },
+        "P003": {
+            "nombre": "Goma de Borrar",
+            "precio": 200,
+            "sku": "P003"
+        },
+        "P004": {
+            "nombre": "PAN",
+            "precio": 50.0
+        }
+    },
+    "ventas": {
+        "2025-06-10": [
+            {
+                "numero": "BOLETA-2025-06-10-001",
+                "tipo": "boleta",
+                "fecha": "2025-06-10T21:08:43.494494",
+                "vendedor": "vendedor1",
+                "productos": [
+                    {
+                        "codigo": "P002",
+                        "nombre": "Lápiz Grafito HB",
+                        "precio": 300,
+                        "cantidad": 6,
+                        "total": 1800
+                    },
+                    {
+                        "codigo": "P001",
+                        "nombre": "Cuaderno Pro",
+                        "precio": 1500,
+                        "cantidad": 7,
+                        "total": 10500
+                    }
+                ],
+                "subtotal": 12300,
+                "iva": 2337.0,
+                "total": 14637.0,
+                "cliente": null
+            },
+            {
+                "numero": "BOLETA-2025-06-10-002",
+                "tipo": "boleta",
+                "fecha": "2025-06-10T21:09:10.632167",
+                "vendedor": "vendedor1",
+                "productos": [
+                    {
+                        "codigo": "P001",
+                        "nombre": "Cuaderno Pro",
+                        "precio": 1500,
+                        "cantidad": 6,
+                        "total": 9000
+                    }
+                ],
+                "subtotal": 9000,
+                "iva": 1710.0,
+                "total": 10710.0,
+                "cliente": null
+            },
+            {
+                "numero": "FACTURA-2025-06-10-001",
+                "tipo": "factura",
+                "fecha": "2025-06-10T22:14:15.405433",
+                "vendedor": "vendedor1",
+                "productos": [
+                    {
+                        "codigo": "P004",
+                        "nombre": "PAN",
+                        "precio": 50.0,
+                        "cantidad": 4,
+                        "total": 200.0
+                    }
+                ],
+                "subtotal": 200.0,
+                "iva": 38.0,
+                "total": 238.0,
+                "cliente": {
+                    "rut": "12.311.231-1",
+                    "razon_social": "pepito S.A",
+                    "giro": "asdas",
+                    "direccion": "av siempre viva 123",
+                    "email": "pepitosa@chile.cl"
+                }
+            }
+        ]
+    },
+    "dias_abiertos": {
+        "2025-06-10": {
+            "estado": "abierto",
+            "fecha_apertura": "2025-06-10T22:24:48.018578",
+            "ventas": []
+        }
+    }
+}

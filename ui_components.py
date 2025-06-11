@@ -1,3 +1,5 @@
+# ui_components.py
+
 import tkinter as tk
 from styles import BUTTON_STYLES, LABEL_STYLES, ENTRY_STYLES, FRAME_STYLES, COLORS, FONTS
 
@@ -15,7 +17,7 @@ class StyledButton(tk.Button):
 
         super().__init__(parent, text=text, command=command, **final_style)
         
-        self.original_bg = final_style['bg']
+        self.original_bg = final_style.get('bg', COLORS['primary'])
         self.hover_color = self._get_hover_color(self.original_bg)
         
         self.bind("<Enter>", self._on_enter)
@@ -144,7 +146,7 @@ class MessageDialog:
 class LoginForm(StyledFrame):
     def __init__(self, parent, title, on_login, on_cancel, **kwargs):
         super().__init__(parent, style='card', **kwargs)
-        self.pack(fill='both', expand=True, padx=30, pady=30)
+        # self.pack(fill='both', expand=True, padx=30, pady=30)
         
         self.on_login = on_login
         
@@ -167,6 +169,7 @@ class LoginForm(StyledFrame):
         StyledButton(button_frame, "Cancelar", style='secondary',
                     command=on_cancel).pack(side='right', expand=True, fill='x', padx=(5, 0))
         
+        self.entry_user.focus_set()
         self.entry_password.bind('<Return>', lambda e: self._handle_login())
         
     def _handle_login(self):

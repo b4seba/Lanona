@@ -1,3 +1,5 @@
+# styles.py
+
 # Paleta de Colores Moderna
 COLORS = {
     'primary': '#007BFF',
@@ -51,6 +53,11 @@ BUTTON_STYLES = {
         'bg': COLORS['danger'],
         'activebackground': '#b21f2d',
         'activeforeground': COLORS['white']
+    },
+    'warning': {
+        'bg': COLORS['warning'],
+        'activebackground': '#d39e00',
+        'activeforeground': COLORS['dark']
     }
 }
 
